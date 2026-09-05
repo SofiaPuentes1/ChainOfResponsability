@@ -1,5 +1,6 @@
 Chain of Responsibility es adecuado para este problema porque las solicitudes universitarias no siempre las resuelve la misma persona,pues según el tipo de solicitud, la responsabilidad recae en distintos niveles (Monitor, Profesor, Coordinador, Secretaría o Decanatura), y quien envía la solicitud no debería tener que saber de antemano quién es el responsable final. El patrón desacopla al emisor de los posibles receptores, cada Handler decide si puede resolver la solicitud o si debe pasarla al siguiente eslabón, sin que la clase Main tenga que preguntar "¿quién atiende esto?". Además, la cadena es fácil de extender, si se agrega un nuevo nivel, basta con crear una clase que extienda Handler y enlazarla con setNext, sin modificar el resto del código. Esto respeta el principio de responsabilidad única y el principio abierto/cerrado. Finalmente, el patrón modela de forma natural el caso en que nadie puede resolver la solicitud, simplemente llega al final de la cadena y queda sin atender, tal como pasaría en la vida real con un trámite que ningún nivel administrativo tiene autoridad para resolver.
-
+-
 
 Ángela Sofía Puentes Medina - 20241020114
+
 Juan Sneyder Mendez Gil - 20251020010
